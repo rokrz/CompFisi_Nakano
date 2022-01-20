@@ -32,6 +32,7 @@ Bibliotecas:
   - Conectar o pino VCC do L298N com o pino Vin da placa NodeMCU
   
   Código:
+  
     Inicialmente, importamos a biblioteca de WiFi da placa ESP8266 e definimos as constantes que serão utilizadas no código, relacionadas à WiFi(ssid e password), as instâncias de conexão(WiFiClient e WiFiServer),
   a variável que armazena os comandos recebidos(data) e as portas(pinos) a serem utilizadas (leftMotorForward, rightMotorForward, leftMotorBackward, righMotorBackward, leftMotorENB e rightMotorENB).
     No nosso método de setup, que é o primeiro método a ser executado, inicializamos os pinos de controle de motor e de habilitar os motores como saídas de comando. Depois disso, configuramos o serial da nossa placa, 
@@ -43,7 +44,9 @@ Bibliotecas:
     Além desses métodos, temos os métodos que são chamados no loop, para controlar a direção do carrinho. Cada método é responsável por controlar se o carro avança, recua, vira para a direita ou para a esquerda.
   Esse controle é realizado através do sinal emitido pela placa para os motores das rodas, controlando a direção em que cada um gira com base no movimento desejado.
   
+  
   Execução do Código:
+  
     Antes de subir o código no NodeMCU, nos campos relacionados à conexão WiFi, ssid e password, com o nome da rede e a senha.
     Com o carro conectado no computador via USB, abra a janela do Serial na IDE do Arduino(Lupa no canto superior direito), e inicie o código.
   Anote o endereço IP que for impresso no Serial.
