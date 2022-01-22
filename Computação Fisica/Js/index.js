@@ -20,7 +20,7 @@ const client = new tmi.Client({
         secure: true
     },
     authProvider: authProvider,
-    channels: ['clientId']
+    channels: [client]
 });
 client.connect().catch(console.error);
 client.on('message', (channel, tags, message, self) => {
