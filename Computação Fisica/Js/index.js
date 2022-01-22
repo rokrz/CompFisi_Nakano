@@ -1,7 +1,9 @@
 const tmi = require('twitch-auth-tmi');
 const request = require('request-promise')
 const { StaticAuthProvider } = require('twitch-auth');
-const authProvider = new StaticAuthProvider("clientID", "authProvider");
+const client = "";
+const auth = ""
+const authProvider = new StaticAuthProvider(client, auth);
 var url = "";
 
 const movimentos = { "f": "forward", "frente": "forward", "direita": "right", "d": "right", "esquerda": "left", "e": "left", "tras": "backward", "t": "backward", "para": "stop", "p": "stop" }
