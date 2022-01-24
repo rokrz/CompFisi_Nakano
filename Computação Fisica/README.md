@@ -21,7 +21,41 @@ O projeto do carrinho é inspirado [neste link que quebrou entre o início e o f
 
 Um projeto de carrinho similar, cujo link funciona em 24 de janeiro de 2022 é: https://create.arduino.cc/projecthub/diyprojectslab/make-wi-fi-controller-car-using-esp8266-297e49.
 
-Na figura 2, abaixo, são apresentados os principais agentes de hardware e software, conexões físicas (num sentido amplo) e caminhos de dados. Os agentes são representados por blocos e imagens. As conexões são representadas por linhas pretas finas (num sentido amplo). Os caminhos de dados são representados por curvas coloridas.
+Nesta atividade, construiu-se um carrinho e todos os programas de apoio para que este seja controlado pelo chat da Twitch.
+
+O desenvolvimento e teste foi feito localmente. No local de desenvolvimento, o desenvolvedor dispõe de um computador contendo as ferramentas de desenvolvimento e teste; e do carrinho. Computador e carrinho se conectam por Wi-Fi, através de um ponto de acesso. Este também provê acesso à Internet.
+
+
+Na Figura 2, abaixo, são apresentados os principais agentes de hardware e software, conexões físicas (num sentido amplo) e caminhos de dados. Os agentes são representados por blocos e imagens. As conexões são representadas por linhas pretas finas (num sentido amplo). Os caminhos das mensagens são representados por curvas coloridas.
 
 ![Figura 2 - TwitchCar-FisicoProcessosCompProtocolos](./TwitchCar-FisicoProcessosCompProtocolos.png)
+
+
+As pessoas que desejam controlar o carrinho entram pela sua conta na Twitch e iniciam o chat com um *bot*. Este *bot* é a representação do carrinho na Twitch. As pessoas enviam os comandos através do chat. O caminho das mensagens é representado pelas curvas verdes na Figura 2. O *bot* encaminha as mensagens para a extensão. O caminho dessas mensagens é representado pela curva laranja. A extensão interpreta o texto das mensagens e envia, pelo Wi-Fi local, ao programa do carrinho, as mensagens para ligar e desligar os motores. O caminho destas mensagens é representado pela curva azul.
+
+O programa executado no carrinho está [neste link deste repositório](./Arduino). O programa é compilado e transferido para o carrinho através da [IDE do Arduino](https://www.arduino.cc/). As instruções para configuração da IDE para programar o microcontrolador Node-ESP8266 estão [neste link externo](https://github.com/FNakano/CFA/tree/master/componentes/controladores/ESP#configurar-arduinoide-para-programar-o-esp8266-ou-o-esp32).
+
+A extensão da Twitch é executada no computador do desenvolvedor. As instruções para instalação da extensão estão [neste link deste repositório](./Js).
+
+## Sobre administração do repositório
+
+Informação sobre como administrar um repositório github. 
+
+Para criar esta página, fiz uma bifurcação (fork) do repositório do grupo que desenvolveu o carrinho, acrescentei este arquivo na bifurcação e pretendo fazer um *pull request*.
+
+### Quando se é colaborador no trabalho, não é necessário fazer uma bifurcação:
+
+- https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests
+- https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
+
+### ... mas não é o meu caso, então precisei criar uma bifurcação e vou fazer um *pull request*:
+
+- https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks
+- https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork
+
+### ... para fundir (merge) a informação do repositório bifurcado com a do repositório original:
+
+- https://www.google.com/search?channel=fs&client=ubuntu&q=github+aceitar+um+pull+request
+- https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/approving-a-pull-request-with-required-reviews
+- https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request
 
